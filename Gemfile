@@ -7,6 +7,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'figaro'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'devise'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -21,7 +24,6 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
   gem 'pry-rails'
 end
