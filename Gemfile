@@ -7,6 +7,7 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'bootswatch-rails'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'devise'
@@ -17,7 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+gem "fog-aws"
 
 group :development, :test do
   gem 'byebug'
