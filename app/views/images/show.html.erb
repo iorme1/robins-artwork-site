@@ -1,2 +1,13 @@
-<h1>Images#show</h1>
-<p>Find me in app/views/images/show.html.erb</p>
+<span class="img-show">
+  <%= image_tag(@image.image_url) %>
+</span>
+
+<div class="img-desc">
+  <h1><strong><%= @image.title %></strong></h1>
+  <p><strong><%= @image.date %></strong></p>
+  <p><strong><%= @image.description %></p>
+  <% if current_user.email === "isorme1@gmail.com" || current_user.email = "ggorme@gmail.com" %>
+    <%= link_to "Remove", image_path(@image), method: :delete, class: "btn btn-primary btn-sm" %>
+    <%= link_to "Edit", edit_image_path(@image), class: "btn btn-info btn-sm" %>
+  <% end %>
+</div>

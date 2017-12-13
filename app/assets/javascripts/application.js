@@ -15,3 +15,27 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+function displayHandler(btn) {
+  if ( !$('.paint-index').hasClass("hidden") ) {
+    $('.paint-index').addClass("hidden");
+  }
+  if ( !$('.photo-index').hasClass("hidden") ) {
+    $('.photo-index').addClass("hidden");
+  }
+  if ( !$('.sculp-index').hasClass("hidden") ) {
+    $('.sculp-index').addClass("hidden");
+  }
+
+  switch(btn) {
+    case "Sculptures":
+      $('.sculp-index').toggleClass("hidden")
+      break;
+    case "Paintings":
+      $('.paint-index').toggleClass("hidden")
+      break;
+    case "Photography":
+      $('.photo-index').toggleClass("hidden")
+      break;
+  }
+}

@@ -1,2 +1,28 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<div class="jumbotron gallery-select">
+
+  <h1>Select A Gallery</h1>
+  <%= link_to "Add New Artwork", new_image_path, class: "btn btn-default" %>
+  <button class="btn btn-info" onclick="displayHandler(this.innerHTML)">Sculptures</button>
+  <button class="btn btn-success" onclick="displayHandler(this.innerHTML)">Photography</button>
+  <button class="btn btn-warning" onclick="displayHandler(this.innerHTML)">Paintings</button>
+</div>
+
+
+
+<div class="sculp-index hidden">
+  <% @sculptures.each do |sculp| %>
+    <%= link_to image_tag(sculp.image_url), image_path(sculp) %>
+  <% end %>
+</div>
+
+<div class="photo-index hidden">
+  <% @photography.each do |photo| %>
+    <%= link_to image_tag(photo.image_url), image_path(photo) %>
+  <% end %>
+</div>
+
+<div class="paint-index hidden">
+  <% @paintings.each do |paint| %>
+    <%= link_to image_tag(paint.image_url), image_path(paint) %>
+  <% end %>
+</div>

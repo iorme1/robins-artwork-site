@@ -1,0 +1,23 @@
+<%= form_for @image do |f| %>
+  <div class="form-field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div><br />
+  <div class="form-field">
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div><br />
+  <div class="form-field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div><br />
+  <div class="form-field">
+    <%= f.file_field :image %>
+  </div><br />
+  <div class="form-field">
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
+  </div><br />
+  <div class="form-field">
+    <%= f.submit "Add Image To Gallery!", class: "btn btn-success" %>
+  </div>
+<% end %>

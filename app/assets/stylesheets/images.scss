@@ -1,3 +1,50 @@
 // Place all the styles related to the Images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.img-show {
+  margin-top: 12px;
+  float:left;
+}
+.img-show img {
+  border: groove;
+  border-color: black;
+}
+
+.img-desc {
+  font-size: 18px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.sculp-index, .photo-index, .paint-index {
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+.sculp-index img, .photo-index img, .paint-index img {
+  width: 100% !important;
+  height: auto !important;
+  border: groove;
+  border-color: black;
+}
+.sculp-index img:hover, .photo-index img:hover, .paint-index img:hover {
+  border-style: dashed;
+}
+
+.sculp-index, .paint-index, .photo-index {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hidden {
+  display: none;
+}
