@@ -1,16 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
 @import "bootstrap-sprockets";
 @import "bootswatch/cosmo/variables";
 @import "bootstrap";
 @import "bootswatch/cosmo/bootswatch";
 
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
 .page-nav {
   margin: 0;
 }
 
+.upload-title {
+  text-align: center;
+}
+.devise-forms {
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 10px;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+
 .welcome {
+  margin-top: 12px;
   color: white;
   text-align: center;
+  text-shadow: 1.5px 1.5px black;
   background-image:url('http://unrtd.co/wp-content/uploads/2016/11/thrupence-.jpg');
+  box-shadow: 3px 3px 5px 6px #ccc;
+  border-style: groove;
+
+
 }
 
 .navright {
@@ -18,7 +46,33 @@
 }
 
 .gallery-select {
+  margin-top: 12px;
   color: white;
   background-image:url('http://unrtd.co/wp-content/uploads/2016/11/thrupence-.jpg');
+  box-sizing: border-box;
+  border-radius: 5px;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 1.5em, 1.25em;
+
+}
+.btn-custom2 {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #222;
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: #333;
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+button {
+  box-shadow: 0.5px 0.5px 2px 3px black;
+
 }

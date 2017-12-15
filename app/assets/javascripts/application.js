@@ -38,4 +38,7 @@ function displayHandler(btn) {
       $('.photo-index').toggleClass("hidden")
       break;
   }
+
+  var currGall = document.getElementById('curr-gal');
+  currGall.innerHTML = btn;
 }
