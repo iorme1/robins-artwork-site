@@ -1,0 +1,16 @@
+
+  <% @audios.each do |audio| %>
+    <div class="songs-indiv">
+      <h3><%= audio.title %></h3>
+      <p><%= audio.date %></p><br/>
+      <audio id="<%= audio.id %>" controls>
+        <source src="<%= audio.audio.url %>"><source>
+      </audio>
+      <% if current_user.email === "isorme1@gmail.com" || current_user.email = "jrorme1@sbcglobal.net" %>
+        <div class="add-remove">
+          <%= link_to "Remove", audio_path(audio), method: :delete, class: "btn-custom2" %>
+          <%= link_to "Edit", edit_audio_path(audio), class: "btn-custom2" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>

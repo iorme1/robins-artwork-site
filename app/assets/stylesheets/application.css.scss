@@ -4,6 +4,10 @@
 @import "bootstrap";
 @import "bootswatch/cosmo/bootswatch";
 
+body.audiosindex, body.poemsindex {
+  background: linear-gradient(white,grey);
+
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Ubuntu', sans-serif;
@@ -29,7 +33,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.welcome {
+.welcome-pg {
   margin-top: 12px;
   color: white;
   text-align: center;
@@ -71,6 +75,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 button {
-  box-shadow: 0.5px 0.5px 2px 3px black; 
+  box-shadow: 0.5px 0.5px 2px 3px black;
 
 }

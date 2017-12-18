@@ -4,17 +4,19 @@
   <title>RobinsArtSite</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'images', media: 'all' %>
+  <%= stylesheet_link_tag    'audios', media: 'all' %>
+  <%= stylesheet_link_tag    'poems', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= params[:controller].parameterize %><%= params[:action] %>">
 
     <nav class="navbar navbar-default page-nav">
       <ul class="nav navbar-nav navbar-left">
         <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
         <li><%= link_to "Artwork Collection", images_path, class: "navbar-brand" %></li>
         <li><%= link_to "Poetry Collection", poems_path, class: "navbar-brand" %></li>
-        <li><%= link_to "Song Collection", root_path, class: "navbar-brand" %></li>
+        <li><%= link_to "Song Collection", audios_path, class: "navbar-brand" %></li>
       </ul>
         <ul class="nav navbar-nav navbar-right navright">
           <% if user_signed_in? %>

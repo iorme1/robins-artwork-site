@@ -1,0 +1,20 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="devise-forms">
+    <%= form_for @audio do |f| %>
+      <div class="form-field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div><br />
+      <div class="form-field">
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+      </div><br />
+      <div class="form-field">
+        <%= f.file_field :audio %>
+      </div><br />
+      <div class="form-field">
+        <%= f.submit "Add Song To Collection!", class: "btn-custom2" %>
+      </div>
+    <% end %>
+  </div>
+</div>

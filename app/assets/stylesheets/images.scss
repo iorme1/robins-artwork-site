@@ -1,10 +1,15 @@
 // Place all the styles related to the Images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.upload-title {
+  text-align: center;
+}
+
 #curr-gal {
   text-align: center;
   background-image: url('');
 }
+
 .img-show {
   margin-top: 12px;
   float:left;
@@ -15,7 +20,7 @@
 }
 
 .img-desc {
-  width: 200px;
+  width: 400px;
   float:right;
   font-size: 18px;
   text-align: center;
