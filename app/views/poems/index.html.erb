@@ -1,0 +1,7 @@
+<div class="page-header">
+  <h2> Robin's Poems </h2>
+</div>
+<% if current_user.email === 'isorme1@gmail.com'|| current_user.email === 'jrorme1@sbcglobal.net' %>
+  <%= link_to "Add New Poem", new_poem_path, class: "btn-custom2" %>
+<% end %><br />
+<%= render 'poem' %> <br/>
