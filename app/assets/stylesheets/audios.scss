@@ -1,11 +1,20 @@
 // Place all the styles related to the audios controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.r-songs {
+  border-radius: 25px;
+  box-shadow: 2px 2px 3px 4px grey;
+  margin: 10px auto;
+  background-color: black;
+  opacity: 0.9;
+
+}
 
 .header-title-songs {
   text-align: center;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 50px;
+  color:white;
 }
 
 .add-song {
@@ -16,7 +25,7 @@
   text-align: center;
 }
 .songs-indiv {
-  width: 600px;
+  width: 400px;
   margin: 0 auto;
   margin-top: 12px;
   text-align: center;
@@ -28,7 +37,9 @@
   padding-left: 8px;
   padding-bottom: 25px;
   margin-bottom: 12px;
-  box-shadow: 2px 2px 4px 5px white;
+  box-shadow: 2px 2px 3px 4px grey;
+  float: left;
+  margin-right: 10px;
 }
 .audio-index {
   margin-top: 20px;

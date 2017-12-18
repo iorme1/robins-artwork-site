@@ -4,9 +4,12 @@
 @import "bootstrap";
 @import "bootswatch/cosmo/bootswatch";
 
-body.audiosindex, body.poemsindex {
-  background: linear-gradient(white,grey);
+body.audiosindex, body.audiosnew, body.audiosedit {
+  background-image:url('audio-bg.jpg');
+}
 
+body.poemsindex, body.poemsnew, body.poemsedit {
+  background-image:url('poem-bg.jpg');
 }
 
 h1,h2,h3,h4,h5,h6 {
