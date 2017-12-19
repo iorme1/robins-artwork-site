@@ -1,7 +1,7 @@
 <div class="poems-index">
   <% @poems.each do |poem| %>
     <div class="poems-display">
-      <h1><strong><%= poem.title %></strong></h1><br/>
+      <h1 id="poems-title"><strong><%= poem.title %></strong></h1><br/>
       <p><strong><%= poem.date %></strong></p><br />
       <p><strong><%= simple_format h(poem.body) %></p><br />
       <% if current_user.email === "isorme1@gmail.com" || current_user.email = "jrorme1@sbcglobal.net" %>

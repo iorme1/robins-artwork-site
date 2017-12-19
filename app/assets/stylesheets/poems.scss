@@ -1,13 +1,30 @@
 // Place all the styles related to the poems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#poems-title {
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
 .poem-header {
   border: 2px solid black;
   border-radius: 50px;
   box-shadow: 2px 2px 3px 4px grey;
   margin: 20px auto;
-  background-color: tan;
-  opacity: 0.9;
+  /*background-color: tan; */
+  background: linear-gradient(#d1913c, #ffd194);
+  opacity: 0.8;
   font-weight: bold;
 
 }
@@ -15,8 +32,10 @@
   width: 325px;
   text-align: center;
   margin-top: 20px;
-  background-color: tan;
-  opacity: 0.9;
+  /*background-color: tan;*/
+  background: linear-gradient(#d1913c, #ffd194);
+
+  opacity: 0.8;
   color:black;
   border: 2px solid black;
   padding: 10px;
@@ -32,6 +51,18 @@
   font-size: 40px;
   color:black;
   font-weight: bold;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 }
 
 .add-poem {
