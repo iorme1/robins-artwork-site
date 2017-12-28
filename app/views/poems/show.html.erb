@@ -1,2 +1,9 @@
-<h1>Poems#show</h1>
-<p>Find me in app/views/poems/show.html.erb</p>
+<div class="poems-show-page">
+  <h1><%= @poem.title %></h1>
+  <p><strong><%= @poem.date %></strong></p><br />
+  <p><strong><%= simple_format h(@poem.body) %></p><br />
+  <% if current_user.email === "isorme1@gmail.com" || current_user.email = "jrorme1@sbcglobal.net" %>
+    <%= link_to "Remove", poem_path(@poem), method: :delete, class: "btn-custom2" %>
+    <%= link_to "Edit", edit_poem_path(@poem), class: "btn-custom2" %>
+  <% end %>
+</div>

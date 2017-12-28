@@ -1,13 +1,7 @@
 <div class="poems-index">
   <% @poems.each do |poem| %>
     <div class="poems-display">
-      <h1 id="poems-title"><strong><%= poem.title %></strong></h1><br/>
-      <p><strong><%= poem.date %></strong></p><br />
-      <p><strong><%= simple_format h(poem.body) %></p><br />
-      <% if current_user.email === "isorme1@gmail.com" || current_user.email = "jrorme1@sbcglobal.net" %>
-        <%= link_to "Remove", poem_path(poem), method: :delete, class: "btn-custom2" %>
-        <%= link_to "Edit", edit_poem_path(poem), class: "btn-custom2" %>
-      <% end %>
+      <h1 id="poems-title"><strong><%= link_to poem.title, poem_path(poem) %></strong></h1><br/>
     </div>
   <% end %>
 </div>
