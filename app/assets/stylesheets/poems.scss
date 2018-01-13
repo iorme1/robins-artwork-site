@@ -2,17 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .poems-title {
-  border-style: hidden;
-  border-radius:  10px;
-  width: 300px;
-  margin: 0 auto;
-  box-shadow: 1px 1px 2px 3px grey;
-  font-size: 25px;
-}
-
-.poems-display > button  {
-  margin-top: 10px;
-  margin-right: 5px;
+  font-size: 20px;
+  margin-top: 0px;
 }
 
 .poems-title:hover{
@@ -26,10 +17,13 @@
 }
 
 .r-poem-title {
+  color: #7c795d;
+  font-family: 'Trocchi', serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
   text-align: center;
-  font-size: 40px;
-  color:black;
-  text-decoration: underline;
 }
 
 .add-poem {
