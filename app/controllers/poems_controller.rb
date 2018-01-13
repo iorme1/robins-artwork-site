@@ -2,7 +2,7 @@ class PoemsController < ApplicationController
   before_action :set_poem, only: [:show, :edit, :update, :destroy]
 
   def index
-    @poems = Poem.all
+    @poems = Poem.order(:title)
   end
 
   def show
@@ -50,6 +50,6 @@ class PoemsController < ApplicationController
   end
 
   def poem_params
-    params.require(:poem).permit(:title, :date, :body)
+    params.require(:poem).permit(:title, :date, :body, :visible)
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218032134) do
+ActiveRecord::Schema.define(version: 20180113173556) do
 
   create_table "audios", force: :cascade do |t|
     t.string   "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20171218032134) do
     t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "visible"
   end
 
   create_table "users", force: :cascade do |t|

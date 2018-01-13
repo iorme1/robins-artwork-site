@@ -1,5 +1,9 @@
 <%= form_for @poem do |f| %>
   <div class="form-group">
+    <%= f.label :visible, "Work in Progress?" %>
+    <%= f.check_box :visible %>
+  </div>
+  <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control', placeholder: "Enter Poem title" %>
   </div>

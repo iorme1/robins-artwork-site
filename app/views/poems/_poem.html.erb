@@ -1,7 +1,10 @@
-<div class="poems-index">
-  <% @poems.each do |poem| %>
+<% @poems.each do |poem| %>
+  <% if current_user.email != 'jrorme1@sbcglobal.net' && poem.visible == true  %>
+  <% else %>
     <div class="poems-display">
-      <h1 id="poems-title"><strong><%= link_to poem.title, poem_path(poem) %></strong></h1><br/>
-    </div>
+      <h1 class="poems-title">
+        <strong><%= link_to poem.title, poem_path(poem) %></strong>
+      </h1>
+    </div><br />
   <% end %>
-</div>
+<% end %>
