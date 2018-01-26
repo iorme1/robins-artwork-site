@@ -1,12 +1,29 @@
 // Place all the styles related to the poems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.poems-show-page h1 {
+  font-family:  Papyrus, fantasy, "Helvetica Neue", Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
 
+.poems-show-page p {
+  font-family:  Papyrus, fantasy, "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
 .semi-form {
   margin-top: 20px;
 }
 
 .poems-title {
+  font-family: Papyrus, fantasy, "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   margin-top: 0px;
 }
@@ -23,11 +40,11 @@
 
 .r-poem-title {
   color: #7c795d;
-  font-family: 'Trocchi', serif;
+  font-family:  Papyrus, fantasy, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
   font-weight: normal;
   line-height: 48px;
-  margin: 0;
+  margin-top: 15px;
   text-align: center;
 }
 
