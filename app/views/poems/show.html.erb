@@ -5,5 +5,19 @@
   <% if current_user.email === "isorme1@gmail.com" || current_user.email = "jrorme1@sbcglobal.net" %>
     <%= link_to "Remove", poem_path(@poem), method: :delete, class: "btn-custom2" %>
     <%= link_to "Edit", edit_poem_path(@poem), class: "btn-custom2" %>
+
+  <div class="semi-form">
+    <%= form_for @poem do |f| %>
+      <div class="form-group">
+        <%= f.label :visible, "Hide From Viewers" %>
+        <%= f.check_box :visible %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Click to confirm hidden status", class: "btn-sm btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+
+
   <% end %>
 </div>
