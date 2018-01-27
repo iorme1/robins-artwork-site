@@ -4,12 +4,18 @@
 @import "bootstrap";
 @import "bootswatch/cosmo/bootswatch";
 
-body.audiosindex, body.audiosnew, body.audiosedit {
-  background-image:url('audio-bg.jpg');
+html {
+  min-height: 100%;
 }
 
-body.poemsindex, body.poemsnew, body.poemsedit {
-  background-image:url('poem-bg.jpg'); 
+body.audiosindex, body.audiosnew, body.audiosedit {
+  background-image: url('audio-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.poemsindex, body.poemsnew, body.poemsedit, body.poemsshow {
+
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -17,8 +23,13 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 300;
 }
 
+.main-nav {
+
+}
 .page-nav {
   margin: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .upload-title {
