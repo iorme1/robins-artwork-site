@@ -1,6 +1,8 @@
 <span class="img-show">
-  <%= image_tag(@image.image_url) %>
+  <%= link_to image_tag(@image.image_url), @image.image_url %>
+  <p><strong>Click image for full-size view</strong></p>
 </span>
+
 
 <div class="img-desc">
   <h1><strong><%= @image.title %></strong></h1>
