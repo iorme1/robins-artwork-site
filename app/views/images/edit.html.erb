@@ -1,2 +1,27 @@
 <h1>Edit your Image Below</h1>
-<%= render 'form' %>
+<div class="col-md-6 col-md-offset-3">
+  <div class="devise-forms">
+    <%= form_for @image, :html => { :multipart => true} do |f| %>
+      <div class="form-field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div><br />
+      <div class="form-field">
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+      </div><br />
+      <div class="form-field">
+        <%= f.text_area :description, placeholder: "Enter description here..." %>
+      </div><br />
+      <div class="form-field">
+        <%= f.file_field :image %>
+      </div><br />
+      <div class="form-field">
+        <%= f.select :category_id, @categories %>
+      </div><br />
+      <div class="form-field">
+        <%= f.submit "Add Image To Gallery!", class: "btn-custom2" %>
+      </div>
+    <% end %>
+  </div>
+</div>
