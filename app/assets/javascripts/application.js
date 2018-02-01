@@ -16,6 +16,43 @@
 //= require turbolinks
 //= require_tree .
 
+
+function handleEnter() {
+  var liTrigger = this;
+
+  this.classList.add('trigger-enter');
+  setTimeout(function() {
+     liTrigger.classList.contains('trigger-enter') && liTrigger.classList.add('trigger-enter-active');
+   },150);
+
+  background.classList.add('open');
+  var dropdown = this.querySelector('.dropdown');
+  var dropdownCoords = dropdown.getBoundingClientRect();
+  var navCoords = nav.getBoundingClientRect();
+  var coords = {
+    height: dropdownCoords.height,
+    width: dropdownCoords.width,
+    top: dropdownCoords.top - navCoords.top,
+    left: dropdownCoords.left - navCoords.left
+  };
+
+  background.style.setProperty('width', coords.width + "px");
+  background.style.setProperty('height', coords.height + "px");
+  background.style.setProperty('transform', 'translate(' + coords.left + 'px, ' + coords.top + 'px)');
+}
+
+function handleLeave() {
+  this.classList.remove('trigger-enter', 'trigger-enter-active');
+  background.classList.remove('open');
+}
+
+
+$(document).on("turbolinks:load", function() {
+   window.background = document.querySelector('.dropdownBackground');
+   window.nav = document.querySelector('.top');
+});
+
+
 function displayHandler(btn) {
   if ( !$('.paint-index').hasClass("hidden") ) {
     $('.paint-index').addClass("hidden");
@@ -42,3 +79,7 @@ function displayHandler(btn) {
   var currGall = document.getElementById('curr-gal');
   currGall.innerHTML = btn;
 }
+
+
+$(document).on('mouseenter', '.li-trigger', handleEnter)
+$(document).on('mouseleave', '.li-trigger', handleLeave)

@@ -11,12 +11,42 @@
 </head>
 <body class="<%= params[:controller].parameterize %><%= params[:action] %>">
 
-    <nav class="navbar navbar-default page-nav">
-      <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
-        <li><%= link_to "Artwork Collection", images_path, class: "navbar-brand" %></li>
-        <li><%= link_to "Poetry Collection", poems_path, class: "navbar-brand" %></li>
-        <li><%= link_to "Song Collection", audios_path, class: "navbar-brand" %></li>
+    <nav class="navbar navbar-default page-nav top">
+      <div class="dropdownBackground">
+        <span class="arrow"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left cool">
+        <li><%= link_to "Home", root_path, class: "navbar-brand n-links" %></li>
+
+        <li class="li-trigger">
+          <%= link_to "Artwork Collection", images_path, class: "navbar-brand n-links-a" %>
+          <div class="dropdown dropdown1">
+            <div class="info-box">
+              <p>Click here to view Robin's Photos, Sculptures and Paintings</p>
+            </div>
+          </div>
+       </li>
+
+        <li class="li-trigger">
+          <%= link_to "Poetry Collection", poems_path, class: "navbar-brand n-links-p" %>
+          <div class="dropdown dropdown2">
+            <div class="info-box">
+              <p>Click here to view Robin's Poems</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="li-trigger">
+          <%= link_to "Song Collection", audios_path, class: "navbar-brand n-links-s" %>
+        <div class="dropdown dropdown3">
+          <div class="info-box">
+            <p>Click here to listen to Robin's songs</p>
+          </div>
+        </div>
+        </li>
+
+
+
       </ul>
         <ul class="nav navbar-nav navbar-right navright">
           <% if user_signed_in? %>

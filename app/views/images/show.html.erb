@@ -8,7 +8,8 @@
   <p><strong><%= @image.date %></strong></p>
   <p><strong><%= @image.description %></p>
   <% if current_user.email === "isorme1@gmail.com" || current_user.email === "jrorme1@sbcglobal.net" %>
-    <%= link_to "Remove", image_path(@image), method: :delete, class: "btn btn-primary btn-sm" %>
+    <%= link_to "Remove", image_path(@image), method: :delete, class: "btn btn-primary btn-sm",
+    data: { confirm: 'Are you sure you want to delete this image?' }%>
     <%= link_to "Edit", edit_image_path(@image), class: "btn btn-info btn-sm" %>
   <% end %>
 </div>
