@@ -22,7 +22,10 @@
           <%= link_to "Artwork Collection", images_path, class: "navbar-brand n-links-a" %>
           <div class="dropdown dropdown1">
             <div class="info-box">
-              <p>Click here to view Robin's Photos, Sculptures and Paintings</p>
+              <p>Click here to view Robin's photos, sculptures and paintings</p>
+              <%= image_tag('camera.png') %>
+              <%= image_tag('copper.png') %>
+              <%= image_tag('brush.png') %>
             </div>
           </div>
        </li>
@@ -31,7 +34,8 @@
           <%= link_to "Poetry Collection", poems_path, class: "navbar-brand n-links-p" %>
           <div class="dropdown dropdown2">
             <div class="info-box">
-              <p>Click here to view Robin's Poems</p>
+              <%= image_tag('poetry.png', class: 'poetry') %>
+              <p>View all of Robin's poems here. A wonderful collection of beautifully written poetry. </p>
             </div>
           </div>
         </li>
@@ -40,7 +44,11 @@
           <%= link_to "Song Collection", audios_path, class: "navbar-brand n-links-s" %>
         <div class="dropdown dropdown3">
           <div class="info-box">
-            <p>Click here to listen to Robin's songs</p>
+            <%= image_tag('guitar.png', class: "guitar") %>
+            <p>
+              Listen to Robin's songs here. Don't miss out on the wonders of Robin's vocals!
+            </p>
+
           </div>
         </div>
         </li>
