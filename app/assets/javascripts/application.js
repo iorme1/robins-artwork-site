@@ -68,7 +68,7 @@ function displayHandler(btn) {
     case "Sculptures":
       $('.sculp-index').toggleClass("hidden")
       break;
-    case "Paintings":
+    case "Paintings/Drawings":
       $('.paint-index').toggleClass("hidden")
       break;
     case "Photography":
