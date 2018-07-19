@@ -46,7 +46,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .info-box {
    min-width:280px;
-  /* display: flex */
    justify-content: center;
    align-items: center;
    line-height: 1.7;
@@ -141,6 +140,14 @@ h1,h2,h3,h4,h5,h6 {
   border-style: groove;
 }
 
+.sub-text {
+  text-align: left;
+}
+
+.enjoy {
+  text-align: center;
+}
+
 .navright {
   margin-right: 10px;
 }
@@ -175,4 +182,19 @@ h1,h2,h3,h4,h5,h6 {
 button {
   box-shadow: 0.5px 0.5px 2px 3px black;
 
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }

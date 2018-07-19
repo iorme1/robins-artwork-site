@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag    'poems', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body class="<%= params[:controller].parameterize %><%= params[:action] %>">
 
@@ -15,7 +16,7 @@
       <div class="dropdownBackground">
         <span class="arrow"></span>
       </div>
-      <ul class="nav navbar-nav navbar-left cool">
+      <ul class="nav navbar-nav navbar-left">
         <li><%= link_to "Home", root_path, class: "navbar-brand n-links" %></li>
 
         <li class="li-trigger">
@@ -48,12 +49,9 @@
             <p>
               Listen to all of Robin's songs here. Guitar and vocals.
             </p>
-
           </div>
         </div>
         </li>
-
-
 
       </ul>
         <ul class="nav navbar-nav navbar-right navright">
