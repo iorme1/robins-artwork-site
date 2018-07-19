@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem "fog-aws"
+gem 'imagesLoaded_rails', '~> 4.1'
 
 group :development, :test do
   gem 'byebug'

@@ -10,6 +10,10 @@
 
 <h2 id="curr-gal" class="page-header">Select Gallery to View Artwork</h2>
 
+<div class="loader hidden">
+  <span class="load-icon">Loading Images...</span>
+</div>
+
 <div class="sculp-index hidden">
   <% @sculptures.each do |sculp| %>
     <%= link_to image_tag(sculp.image_url), image_path(sculp) %>

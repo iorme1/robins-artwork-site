@@ -14,7 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require imagesloaded
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+   window.background = document.querySelector('.dropdownBackground');
+   window.nav = document.querySelector('.top');
+});
 
 
 function handleEnter() {
@@ -41,19 +47,18 @@ function handleEnter() {
   background.style.setProperty('transform', 'translate(' + coords.left + 'px, ' + coords.top + 'px)');
 }
 
+
 function handleLeave() {
   this.classList.remove('trigger-enter', 'trigger-enter-active');
   background.classList.remove('open');
 }
 
 
-$(document).on("turbolinks:load", function() {
-   window.background = document.querySelector('.dropdownBackground');
-   window.nav = document.querySelector('.top');
-});
+function displayHandler(gallery) {
+  // display loading icon
+  $('.loader').removeClass('hidden');
 
-
-function displayHandler(btn) {
+  // hide every image that isnt currently hidden
   if ( !$('.paint-index').hasClass("hidden") ) {
     $('.paint-index').addClass("hidden");
   }
@@ -64,22 +69,27 @@ function displayHandler(btn) {
     $('.sculp-index').addClass("hidden");
   }
 
-  switch(btn) {
-    case "Sculptures":
-      $('.sculp-index').toggleClass("hidden")
-      break;
-    case "Paintings/Drawings":
-      $('.paint-index').toggleClass("hidden")
-      break;
-    case "Photography":
-      $('.photo-index').toggleClass("hidden")
-      break;
-  }
+  // images loaded gem to detect when all images have been loaded 
+  $('.container').imagesLoaded( function() {
+      $('.loader').addClass('hidden');
 
-  var currGall = document.getElementById('curr-gal');
-  currGall.innerHTML = btn;
+      switch(gallery) {
+        case "Sculptures":
+          $('.sculp-index').toggleClass("hidden")
+          break;
+        case "Paintings/Drawings":
+          $('.paint-index').toggleClass("hidden")
+          break;
+        case "Photography":
+          $('.photo-index').toggleClass("hidden")
+          break;
+      }
+
+      var currGall = document.getElementById('curr-gal');
+      currGall.innerHTML = gallery;
+  });
+
 }
-
 
 $(document).on('mouseenter', '.li-trigger', handleEnter)
 $(document).on('mouseleave', '.li-trigger', handleLeave)
