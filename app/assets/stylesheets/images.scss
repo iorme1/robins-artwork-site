@@ -13,7 +13,6 @@
 .img-show {
   margin-top: 20px;
   margin-bottom: 20px;
-  display: inline-block;
 }
 .img-show img {
   border: groove;
@@ -24,12 +23,11 @@
 }
 
 .img-desc {
-  width: 400px;
-  float: right;
+  width: 300px;
   font-size: 18px;
-  text-align: center;
-  margin-left: 30px;
   border-radius: 5px;
+  /*margin-top: 20px;*/
+  margin: 0 auto;
   margin-top: 20px;
   background-color: #fff;
   box-shadow: 3px 3px 5px 6px #ccc;
