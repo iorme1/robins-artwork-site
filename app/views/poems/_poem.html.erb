@@ -1,5 +1,11 @@
 <% @poems.each do |poem| %>
-  <% if current_user.email != 'jrorme1@sbcglobal.net' && poem.visible == true  %>
+  <% if current_user && current_user.admin? %>
+    <div class="poems-display">
+      <h1 class="poems-title">
+        <strong><%= link_to poem.title, poem_path(poem) %></strong>
+      </h1>
+    </div><br />
+  <% elsif poem.visible %>
   <% else %>
     <div class="poems-display">
       <h1 class="poems-title">

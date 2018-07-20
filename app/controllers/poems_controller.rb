@@ -1,5 +1,6 @@
 class PoemsController < ApplicationController
   before_action :set_poem, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user, except: [:index, :show]
 
   def index
     @poems = Poem.order(:title)
@@ -51,5 +52,12 @@ class PoemsController < ApplicationController
 
   def poem_params
     params.require(:poem).permit(:title, :date, :body, :visible)
+  end
+
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to root_path
+    end
   end
 end

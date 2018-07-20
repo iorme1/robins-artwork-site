@@ -1,5 +1,7 @@
 class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy ]
+  before_action :authorize_user, except: [:index, :show]
+  
   def index
     @audios = Audio.all
   end
@@ -50,5 +52,12 @@ class AudiosController < ApplicationController
 
   def audio_params
     params.require(:audio).permit(:audio, :title, :date)
+  end
+
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to root_path
+    end
   end
 end

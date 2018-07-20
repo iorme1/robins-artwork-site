@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user, except: [:index, :show]
 
   def index
     @images = Image.all
@@ -58,5 +59,12 @@ class ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(:image, :title, :description, :category_id, :date)
+  end
+
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to root_path
+    end
   end
 end

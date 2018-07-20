@@ -1,28 +1,26 @@
-<% if current_user.email === "isorme1@gmail.com" || current_user.email === "jrorme1@sbcglobal.net" %>
-  <div class="col-md-6 col-md-offset-3">
-    <div class="devise-forms">
-      <%= form_for @image do |f| %>
-        <div class="form-field">
-          <%= f.label :title %>
-          <%= f.text_field :title %>
-        </div><br />
-        <div class="form-field">
-          <%= f.label :date %>
-          <%= f.date_field :date %>
-        </div><br />
-        <div class="form-field">
-          <%= f.text_area :description, placeholder: "Enter description here..." %>
-        </div><br />
-        <div class="form-field">
-          <%= f.file_field :image %>
-        </div><br />
-        <div class="form-field">
-          <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category", :class => 'btn-custom2') %>
-        </div><br />
-        <div class="form-field">
-          <%= f.submit "Add Image To Gallery!", class: "btn-custom2" %>
-        </div>
-      <% end %>
-    </div>
+<div class="col-md-6 col-md-offset-3">
+  <div class="devise-forms">
+    <%= form_for @image do |f| %>
+      <div class="form-field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div><br />
+      <div class="form-field">
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+      </div><br />
+      <div class="form-field">
+        <%= f.text_area :description, placeholder: "Enter description here..." %>
+      </div><br />
+      <div class="form-field">
+        <%= f.file_field :image %>
+      </div><br />
+      <div class="form-field">
+        <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category", :class => 'btn-custom2') %>
+      </div><br />
+      <div class="form-field">
+        <%= f.submit "Add Image To Gallery!", class: "btn-custom2" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

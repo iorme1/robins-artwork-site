@@ -1,5 +1,5 @@
 <div class="jumbotron gallery-select">
-  <% if current_user.email === 'isorme1@gmail.com' || current_user.email === 'jrorme1@sbcglobal.net' %>
+  <% if current_user && current_user.admin? %>
     <%= link_to "Add New Artwork", new_image_path, class: "btn-custom2" %>
   <% end %>
   <h1>Select A Gallery</h1>
