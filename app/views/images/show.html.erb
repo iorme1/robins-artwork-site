@@ -6,9 +6,13 @@
   </div>
   <div class="col-md-4 col-xs-12">
     <div class="img-desc text-center">
-      <h1><strong><%= @image.title %></strong></h1>
-      <p><strong><%= @image.date %></strong></p>
-      <p><strong><%= @image.description %></p>
+      <% if @image.title.empty? && @image.date.empty? && @image.description.empty?  %>
+        <h1>No image description provided yet.</h1>
+      <% else %>
+        <h1><%= @image.title %></h1>
+        <p><%= @image.date %></p>
+        <p><%= @image.description %></p>
+      <% end %>
       <% if current_user && current_user.admin? %>
         <%= link_to "Remove", image_path(@image), method: :delete, class: "btn btn-primary btn-sm",
         data: { confirm: 'Are you sure you want to delete this image?' }%>
