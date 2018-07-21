@@ -1,7 +1,7 @@
 class AudiosController < ApplicationController
   before_action :set_audio, only: [:show, :edit, :update, :destroy ]
   before_action :authorize_user, except: [:index, :show]
-  
+
   def index
     @audios = Audio.all
   end
@@ -17,7 +17,7 @@ class AudiosController < ApplicationController
     @audio = Audio.new(audio_params)
 
     if @audio.save
-      flash[:notice] = "Song has been saved"
+      flash[:notice] = "Song has been saved."
       redirect_to audios_path
     else
       redirect_to audios_path
@@ -31,7 +31,7 @@ class AudiosController < ApplicationController
   def update
     if @audio.update(audio_params)
       redirect_to audios_path
-      flash[:notice] = "Song successfully updated"
+      flash[:notice] = "Song successfully updated."
     else
       flash[:alert] = "Song was not updated. Please try again."
     end
@@ -41,7 +41,7 @@ class AudiosController < ApplicationController
     @audio.destroy
 
     redirect_to audios_path
-    flash[:notice] = "Song removed"
+    flash[:notice] = "Song removed."
   end
 
   private

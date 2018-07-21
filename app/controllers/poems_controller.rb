@@ -17,7 +17,7 @@ class PoemsController < ApplicationController
     @poem = Poem.new(poem_params)
 
     if @poem.save
-      flash[:notice] = "Poem has been saved"
+      flash[:notice] = "Poem has been saved."
       redirect_to poems_path
     else
       redirect_to poems_path
@@ -28,7 +28,7 @@ class PoemsController < ApplicationController
   def update
     if @poem.update(poem_params)
       redirect_to poems_path
-      flash[:notice] = "Poem successfully updated"
+      flash[:notice] = "Poem successfully updated."
     else
       flash[:alert] = "Poem was not updated. Please try again."
     end
@@ -38,7 +38,7 @@ class PoemsController < ApplicationController
     @poem.destroy
 
     redirect_to poems_path
-    flash[:notice] = "Poem removed"
+    flash[:notice] = "Poem removed."
   end
 
   def edit

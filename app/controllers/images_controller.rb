@@ -22,7 +22,7 @@ class ImagesController < ApplicationController
     @image.category_id = params[:category_id]
 
     if @image.save
-      flash[:notice] = "Artwork has been saved"
+      flash[:notice] = "Artwork has been saved."
       redirect_to images_path
     else
       redirect_to images_path
@@ -38,7 +38,7 @@ class ImagesController < ApplicationController
     @image.category_id = params[:category_id]
     if @image.update(image_params)
       redirect_to images_path
-      flash[:notice] = "Artwork successfully updated"
+      flash[:notice] = "Artwork successfully updated."
     else
       flash[:alert] = "Artwork was not updated. Please try again."
     end
@@ -48,7 +48,7 @@ class ImagesController < ApplicationController
     @image.destroy
 
     redirect_to images_path
-    flash[:notice] = "Artwork removed"
+    flash[:notice] = "Artwork removed."
   end
 
   private
