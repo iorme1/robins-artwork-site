@@ -10,7 +10,3 @@ Built with Ruby on Rails.
 Carrier wave/mini magick and AWS for image/audio uploading.
 
 ## Screenshots
-
-![Art Gallery](screenshot1.png)
-![Poems](screenshot2.png)
-![Songs](screenshot3.png)
