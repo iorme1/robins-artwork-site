@@ -198,3 +198,14 @@ button {
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(360deg); }
 }
+
+
+@media all and (max-width: 1025px) {
+  .info-box {
+    display: none !important;
+  }
+
+  .dropdownBackground {
+    display: none !important;
+  }
+}
