@@ -2,7 +2,12 @@
   <% if current_user && current_user.admin? %>
     <div class="poems-display">
       <h1 class="poems-title">
-        <strong><%= link_to poem.title, poem_path(poem) %></strong>
+        <% if poem.visible %>
+          <strong><%= link_to poem.title, poem_path(poem), class: "work-in-progress"%></strong>
+          <p>( This poem is currently being hidden from users)</p>
+        <% else %>
+          <strong><%= link_to poem.title, poem_path(poem) %></strong>
+        <% end %>
       </h1>
     </div><br />
   <% elsif poem.visible %>
